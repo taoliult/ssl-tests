@@ -1,4 +1,4 @@
-JAVA ?= $(shell if [ -n "$(JAVA_HOME)" ] ; then printf '%s/bin/java' "$(JAVA_HOME)" ; else printf 'java' ; fi )
+JAVA ?= $(shell if [ -n "$(JAVA_HOME)" ] ; then printf '%s/bin/java -Dsemeru.restrictedsecurity=1' "$(JAVA_HOME)" ; else printf 'java -Dsemeru.restrictedsecurity=1' ; fi )
 JAVAC ?= $(shell if [ -n "$(JAVA_HOME)" ] ; then printf '%s/bin/javac' "$(JAVA_HOME)" ; else printf 'javac' ; fi )
 KEYTOOL ?= $(shell if [ -n "$(JAVA_HOME)" ] ; then printf '%s/bin/keytool' "$(JAVA_HOME)" ; else printf 'keytool' ; fi )
 OPENSSL = openssl
